@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.task.TaskFragment"
+    android:focusable="true"
+    android:background="@color/colorMain">
+
+    <include
+        android:id="@+id/editor_toolbar"
+        layout="@layout/task_editor_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/save_task"
+        style="@style/TestViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_toolbar" />
+
+    <TextView
+        android:id="@+id/cancel_task"
+        style="@style/TestViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_toolbar" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/title_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_task" >
+
+        <EditText
+            android:id="@+id/task_title"
+            style="@style/TestViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/white"
+            android:inputType="textShortMessage"
+            android:background="@color/colorSecondary"
+            android:maxLines="1"
+            android:maxLength="80"
+            android:hint="@string/task"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/description_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorSecondary">
+        <EditText
+            android:id="@+id/task_description"
+            style="@style/TestViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/cardview_light_background"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:background="@color/colorSecondary"
+            android:layout_marginBottom="80dp"
+            android:hint="@string/deatails"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/task_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/description_card"
+        app:layout_constraintEnd_toEndOf="@+id/description_card"
+        app:layout_constraintStart_toStartOf="@+id/description_card"
+        app:layout_constraintTop_toTopOf="@+id/description_card"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/reminder_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorMain"
+            android:text="@string/set_reminder"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_reminder"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

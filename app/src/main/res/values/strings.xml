@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TasKing</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="set_reminder">Set reminder</string>
+    <string name="deatails">Deatails</string>
+    <string name="task">Task</string>
+    <string name="delete_task">Delete task</string>
+    <string name="power">Power:</string>
+    <string name="home">Home</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="task_editor">Task editor</string>
+    <string name="task_list">Task list</string>
+</resources>

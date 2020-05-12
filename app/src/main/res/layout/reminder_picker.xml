@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/materialNumberPicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/materialNumberPicker2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorSecondary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hour"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+
+        <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
+            android:id="@+id/reminder_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mnpEditable="false"
+            app:mnpMaxValue="24"
+            app:mnpMinValue="1"
+            app:mnpSeparatorColor="@color/colorAccent"
+            app:mnpTextColor="@color/white"
+            android:solidColor="@color/colorSecondary"
+            app:mnpTextSize="16sp"
+            app:mnpTextStyle="bold"
+            app:mnpValue="1"
+            app:mnpWrapped="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/materialNumberPicker2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialNumberPicker"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/minute"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+
+        <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
+            android:id="@+id/reminder_minute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mnpEditable="false"
+            app:mnpMaxValue="60"
+            app:mnpMinValue="1"
+            app:mnpSeparatorColor="@color/colorAccent"
+            app:mnpTextColor="@color/white"
+            android:solidColor="@color/colorSecondary"
+            app:mnpTextSize="16sp"
+            app:mnpTextStyle="bold"
+            app:mnpValue="1"
+            app:mnpWrapped="false" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
